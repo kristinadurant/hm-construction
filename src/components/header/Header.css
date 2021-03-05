@@ -1,3 +1,6 @@
+body {
+  min-height: 120vh;
+}
 header {
   position: fixed;
   width: 100%;

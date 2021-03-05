@@ -19,7 +19,7 @@ const Header = () => {
                 <Link to='/' className="logo">
                     HM
                 </Link>
-                <nav className='menu__desktop'>
+                <nav className='menu__desktop hide-md'>
                     <ul>
                         <li><Link to='/carronade-park-floor-plans'>HOME</Link></li>
                         <li><Link to='/carronade-park-amenities'>SERVICES</Link></li>
@@ -28,6 +28,10 @@ const Header = () => {
                         <li><Link to='/carronade-park-schedule-tour'>CONTACT US</Link></li>             
                     </ul>
                 </nav>
+                <button className='menu__open show-md' title='Menu'>
+                    <span className='hide'>Open Main Menu</span>
+                    <i className="fas fa-bars"></i>
+                </button>
             </div>
         </header>
     )

@@ -16,6 +16,7 @@ img {
 a {
   text-decoration: none;
   display: inline-block;
+  color: inherit;
 }
 button {
   cursor: pointer;
@@ -46,7 +47,16 @@ span.hide {
   width: 90%;
   margin: auto;
 }
+.show-md {
+  display: none;
+}
 
-body {
-  min-height: 120vh;
+/* Medium Devices */
+@media only screen and (max-width: 1023px) {
+  .show-md {
+    display: initial;
+  }
+  .hide-md {
+    display: none;
+  }
 }
