@@ -28,11 +28,11 @@ const Header = () => {
                 </Link>
                 <nav>
                     <ul>
-                        <li><Link to='/carronade-park-floor-plans'>FLOOR PLANS</Link></li>
-                        <li><Link to='/carronade-park-amenities'>AMENITIES</Link></li>
-                        <li><Link to='/carronade-park-gallery'>GALLERY</Link></li>
-                        <li><Link to='/carronade-park-neighborhood'>NEIGHBORHOOD</Link></li>                       
-                        <li><Link to='/carronade-park-schedule-tour'>SCHEDULE A TOUR</Link></li>             
+                        <li><Link to='/carronade-park-floor-plans'>HOME</Link></li>
+                        <li><Link to='/carronade-park-amenities'>SERVICES</Link></li>
+                        <li><Link to='/carronade-park-gallery'>PROJECTS</Link></li>
+                        <li><Link to='/carronade-park-neighborhood'>ABOUT US</Link></li>                       
+                        <li><Link to='/carronade-park-schedule-tour'>CONTACT US</Link></li>             
                     </ul>
                 </nav>
             </div>
