@@ -13,7 +13,7 @@ header.colored {
   background-color: teal;
   height: 50px;
 }
-header .inner {
+header > .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
