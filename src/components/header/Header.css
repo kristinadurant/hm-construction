@@ -1,0 +1,21 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  top: 0;
+  height: 80px;
+  transition: background-color 0.2s linear, height 0.4s;
+}
+header.colored {
+  background-color: teal;
+  height: 50px;
+}
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.menu__desktop ul {
+  display: flex;
+}

@@ -1,32 +1,25 @@
+import './Header.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Spring } from 'react-spring/renderprops';
 
 const Header = () => {    
-    const [reverse, setReverse] = useState(false);
-    let prevScrollpos = window.pageYOffset;
+    const [headerClass, setHeaderClass]=useState('transparent');
 
     window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-          //scroll up
-        setReverse(false);
-      } else {
-          //scroll down
-        setReverse(true);
-      }
-      prevScrollpos = currentScrollPos;
+        if(window.pageYOffset > 0) {
+            setHeaderClass('colored')
+        } else {
+            setHeaderClass('transparent')
+        }
     };
 
     return (
-        <Spring from={{marginTop: -50}} to={{marginTop: 0}} reset={true} reverse={reverse}>
-            {props =>
-        <header style={props}>
+        <header className={headerClass}>
             <div className="inner">
                 <Link to='/' className="logo">
                     HM
                 </Link>
-                <nav>
+                <nav className='menu__desktop'>
                     <ul>
                         <li><Link to='/carronade-park-floor-plans'>HOME</Link></li>
                         <li><Link to='/carronade-park-amenities'>SERVICES</Link></li>
@@ -37,8 +30,6 @@ const Header = () => {
                 </nav>
             </div>
         </header>
-        }
-        </Spring>
     )
 }
 

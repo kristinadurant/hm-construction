@@ -46,3 +46,7 @@ span.hide {
   width: 90%;
   margin: auto;
 }
+
+body {
+  min-height: 120vh;
+}
