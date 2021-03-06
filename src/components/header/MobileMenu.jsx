@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import MainMenu from './MainMenu';
+import MenuItems from './MenuItems';
 
-const MobileMenu = ({ open, setOpenMobile }) => {
+const MobileMenu = ({ setOpenMobile }) => {
+
     return (
-        <div className={`menu__mobile show-md ${open}` }>
+        <div className='menu__mobile'>
             <div className='inner'>
                 <div>
                     <Link to='/'>HM</Link>
@@ -18,7 +19,7 @@ const MobileMenu = ({ open, setOpenMobile }) => {
                 </div>
 
                 <nav>
-                    <MainMenu />
+                    <MenuItems />
                 </nav>
             </div>
         </div>

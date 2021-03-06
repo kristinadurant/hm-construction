@@ -1,8 +1,9 @@
 import './Header.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import MainMenu from './MainMenu';
+import MenuItems from './MenuItems';
 import MobileMenu from './MobileMenu';
+const logo = require('../../assets/images/hires_moore_construction.png').default;
 
 const Header = () => {    
     const [headerClass, setHeaderClass] = useState('transparent');
@@ -20,14 +21,15 @@ const Header = () => {
 
             <div className="inner">
                 <Link to='/' className="logo">
-                    HM
+                    <span className='hide'>Hires Moore Construction</span>
+                    <img src={logo} alt='Hires Moore Construction' width='200px' height='auto' />
                 </Link>
                 <nav className='menu__desktop hide-md'>
-                    <MainMenu />
+                    <MenuItems />
                 </nav>
 
                 <button 
-                    onClick={() => setOpenMobile('open')} 
+                    onClick={() => setOpenMobile(!openMobile)} 
                     className='menu__open show-md' title='Menu'
                 >
                     <span className='hide'>Open Main Menu</span>
