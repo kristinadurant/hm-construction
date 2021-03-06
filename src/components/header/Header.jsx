@@ -8,6 +8,7 @@ const logo = require('../../assets/images/hires_moore_construction.png').default
 const Header = () => {    
     const [headerClass, setHeaderClass] = useState('transparent');
     const [openMobile, setOpenMobile] = useState(false);
+
     window.onscroll = function() {
         if(window.pageYOffset > 0) {
             setHeaderClass('colored')
@@ -17,7 +18,7 @@ const Header = () => {
     };
 
     return (
-        <header className={headerClass}>
+        <header className={openMobile?  'open ' + headerClass: headerClass}>
 
             <div className="inner">
                 <Link to='/' className="logo">
@@ -32,12 +33,15 @@ const Header = () => {
                     onClick={() => setOpenMobile(!openMobile)} 
                     className='menu__open show-md' title='Menu'
                 >
-                    <span className='hide'>Open Main Menu</span>
-                    <i className="fas fa-bars"></i>
+                    <span className='hide'>Toggle Main Menu</span>
+                        { !openMobile
+                        ? <i className="fas fa-bars"></i>
+                        : <i className="fas fa-times"></i>
+                        }
                 </button>
             </div>
 
-            {openMobile && <MobileMenu setOpenMobile={setOpenMobile} open={openMobile} />}
+            {openMobile && <MobileMenu />}
 
         </header>
     )
