@@ -1,24 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import MainMenu from './MainMenu';
+import MenuItems from './MenuItems';
 
-const MobileMenu = ({ open, setOpenMobile }) => {
+const MobileMenu = () => {
+
     return (
-        <div className={`menu__mobile show-md ${open}` }>
+        <div className='menu__mobile'>
             <div className='inner'>
-                <div>
-                    <Link to='/'>HM</Link>
-                    <button
-                        onClick={() => setOpenMobile(false)}
-                        title='Close'
-                    >
-                        <span className='hide'>Close Main Menu</span>
-                        <i className="fas fa-times"></i>
-                    </button>
-                </div>
-
                 <nav>
-                    <MainMenu />
+                    <MenuItems />
                 </nav>
             </div>
         </div>

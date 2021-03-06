@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MainMenu = () => {
+const MenuItems = () => {
     return (
         <ul>
             <li><Link to='/residential'>Residential</Link></li>
@@ -12,4 +12,4 @@ const MainMenu = () => {
     )
 }
 
-export default MainMenu;
+export default MenuItems;
